@@ -20,6 +20,8 @@ from torch.autograd import Variable
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from matplotlib.ticker import NullLocator
+from PIL import ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

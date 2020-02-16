@@ -42,7 +42,7 @@ def create_modules(module_defs):
             if bn:
                 modules.add_module(f"batch_norm_{module_i}", nn.BatchNorm2d(filters, momentum=0.9, eps=1e-5))
             if module_def["activation"] == "leaky":
-                modules.add_module(f"leaky_{module_i}", nn.LeakyReLU(0.1))
+                modules.add_module(f"leaky_{module_i}", nn.ReLU())
 
         elif module_def["type"] == "maxpool":
             kernel_size = int(module_def["size"])
